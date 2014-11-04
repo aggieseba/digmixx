@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mixname: MyText
+  content: MyText
+  content_squ: MyText
+  voice: false
+  mood: MyText
+  genre: MyText
+  artistname: MyText
+  event: MyText
+  length: 1
+
+two:
+  mixname: MyText
+  content: MyText
+  content_squ: MyText
+  voice: false
+  mood: MyText
+  genre: MyText
+  artistname: MyText
+  event: MyText
+  length: 1

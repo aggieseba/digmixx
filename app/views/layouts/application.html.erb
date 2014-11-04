@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>DIG MIXX｜最高の作業BGMを見つけよう</title>
+
+  <meta name="description" content="アーティスト名や音楽のジャンルを知らなくても探している作業BGMが見つかります。">
+  <meta name="keyword" content="作業BGM, bgm">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="apple-touch-icon" href="<%# iPhone用のアイコン画像が入ります %>">
+  <link rel="icon" href="<%# ファビコンが入ります %>">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
+</head>
+<body>
+<%= render partial: 'layouts/header' %>
+
+<%= yield %>
+
+
+</body>
+</html>
