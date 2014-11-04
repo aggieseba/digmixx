@@ -1,13 +1,12 @@
     <div class="content">
       <div class="inner-content">
-        <div id="topintro">
+        <div id="search-topintro">
           <div class="search-topintro-comment">
-            <h2>DIG MIXX</h2>
-            <h3>DISCOVER YOUR BGM</h3>
+            <h2><%= @result %></h2>
           </div>
         </div>
 
-        <div class="main" role="main">
+        <div class="search-main" role="main">
           <% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
