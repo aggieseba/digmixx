@@ -13,14 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-
-/* normalize */
-@import "partials/normalize";
-
-/* typography */
-@import "partials/typography";
-
-
-/* breakpoint */
-@import "breakpoints/base";
