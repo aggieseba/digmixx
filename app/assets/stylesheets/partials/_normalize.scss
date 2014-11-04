@@ -1,0 +1,55 @@
+/*********************
+html & body
+*********************/
+
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background-color: #202228;
+  color:#5FA9DD;
+}
+
+::-moz-selection {
+  background-color: #202228;
+  color:#5FA9DD;
+}
+
+
+/*********************
+links
+*********************/
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+  text-decoration: none; }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
+/*********************
+list
+*********************/
+
+ul {
+  list-style: none;
+}
