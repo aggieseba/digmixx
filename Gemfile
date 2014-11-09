@@ -29,9 +29,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+<<<<<<< HEAD
 #Searching feature
 gem 'ransack'
 
+=======
+>>>>>>> f26ea3be5202ecfe5f89bd5fe5984ed8f9dfa5d8
 group :development do
   gem "better_errors"
 end
