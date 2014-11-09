@@ -1,5 +1,8 @@
 class SearchController < ApplicationController
   def index
+    @search = Mix.search(params[:q])
+    @mixes = @search.result
+    @search.build_condition
   end
 
   def show
