@@ -142,10 +142,6 @@ DEPENDENCIES
   pg
   rails (= 4.1.6)
   rails_12factor
-<<<<<<< HEAD
-  ransack
-=======
->>>>>>> f26ea3be5202ecfe5f89bd5fe5984ed8f9dfa5d8
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
