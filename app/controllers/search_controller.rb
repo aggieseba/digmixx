@@ -9,4 +9,13 @@ class SearchController < ApplicationController
       @mixes = Mix.all
     end
   end
+
+  private
+  def sort_column
+    params[:sort] || "name"
+  end
+
+  def sort_direction
+    params[:direction] || "asc"
+  end
 end

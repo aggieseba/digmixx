@@ -314,10 +314,25 @@ footer
 }
 
 .search-main {
+  background-color: #fff;
   top: 150px;
-  left: 50px;
   width: 1170px;
   margin: 0 auto;
   position: absolute;
   z-index: 1000;
+}
+
+.search-main .search-sidebar {
+  height: 300px;
+  width: 200px;
+  float: left;
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 20px 0 0 50px;
+}
+
+.search-main .hentry {
+  width: 860px;
+  margin-right: 20px;
+  float: right;
 }

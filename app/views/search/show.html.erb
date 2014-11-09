@@ -4,9 +4,20 @@
           <div class="search-topintro-comment">
             <h2><%= params[:tag] %></h2>
           </div>
+
         </div>
 
         <div class="search-main" role="main">
+
+        <div class="search-sidebar">
+
+          <tr>
+            <th><%= sortable "Voice" %></th>
+            <th><%= sortable "Length" %></th>
+            <th><%= sortable "released_at", "Released" %></th>
+          </tr>
+
+        </div>
           <% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
