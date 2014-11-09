@@ -1,3 +1,35 @@
-<h1>Search#index</h1>
-<p>Find me in app/views/search/index.html.erb</p>
+
+<%= search_form_for @search, url: search_index_path, :action => 'index'  do |f| %>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c%>
+  <% end %>
+  <p><%= link_to_add_fields "Add Conditions", f, :condition %>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
+<% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
+          <article class="hentry" role="article">
+            <header class="article-header">
+              <p class="update-time"><%= mix.updated_at.strftime("%x") %></p>
+            </header>
+            <div class="entry-content">
+              <%= raw mix.content %>
+            </div>
+            <div class="entry-meta">
+              <div class="entry-category">
+                <ul>
+                  <% mix.tag_list.each do |tag| %>
+                    <a href="<%= tag %>"><li class="category-btn"><%= tag %></li></a>
+                  <% end %>
+                </ul>
+              </div>
+              <% if false %>
+              <div class="entry-playlist">
+                <%= mix.artistname %>
+              </div>
+              <% end %>
+            </div>
+          </article>
+          <% end %>
+
 

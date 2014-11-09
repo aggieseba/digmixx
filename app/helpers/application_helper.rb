@@ -1,5 +1,4 @@
 module ApplicationHelper
-<<<<<<< HEAD
   def sortable(column, title = nil)
     title ||= column.titleize
     direction = (column == params[:sort] && params[:direction] == "asc") ? "desc" : "asc"
@@ -14,7 +13,4 @@ module ApplicationHelper
   end
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
-
-=======
->>>>>>> f26ea3be5202ecfe5f89bd5fe5984ed8f9dfa5d8
 end
