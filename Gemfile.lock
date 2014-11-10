@@ -27,8 +27,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.4.2)
-      activerecord (>= 3.2, < 5)
     arel (5.0.1.20140414130214)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
@@ -116,7 +114,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    turbolinks (2.5.1)
+    turbolinks (2.5.2)
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -128,7 +126,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts-as-taggable-on
   better_errors
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
