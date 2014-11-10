@@ -7,6 +7,22 @@
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 
+<%= search_form_for @search, url: search_index_path, :action => 'index' do |f| %>
+  <%= f.label :tags_name_cont, 'タグ' %>
+  <%= f.text_field :tags_name_cont %>
+  <div>
+    <%= f.submit '検索する' %>
+  </div>
+<% end %>
+
+<tr>
+  <th><%= sort_link(@search, :voice, "voice") %></th>
+  <th><%= sort_link(@search, :length, "length") %></th>
+</tr>
+
+<%= params[:q] %>
+<%= params[:tag] %>
+
 <% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
