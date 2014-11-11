@@ -20,8 +20,8 @@
             <div class="entry-meta">
               <div class="entry-category">
                 <ul>
-                  <% mix.tag_list.each do |tag| %>
-                    <a href="search/<%= tag %>"><li class="category-btn"><%= tag %></li></a>
+                  <% mix.tags.each do |tag| %>
+                    <a href="search/<%= tag.tagname %>"><li class="category-btn"><%= tag.tagname %></li></a>
                   <% end %>
                 </ul>
               </div>

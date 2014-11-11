@@ -6,14 +6,8 @@
   <p><%= link_to_add_fields "Add Conditions", f, :condition %>
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
-
-<%= search_form_for @search, url: search_index_path, :action => 'index' do |f| %>
-  <%= f.label :tags_name_cont, 'タグ' %>
-  <%= f.text_field :tags_name_cont %>
-  <div>
-    <%= f.submit '検索する' %>
   </div>
-<% end %>
+
 
 <tr>
   <th><%= sort_link(@search, :voice, "voice") %></th>
@@ -34,8 +28,8 @@
             <div class="entry-meta">
               <div class="entry-category">
                 <ul>
-                  <% mix.tag_list.each do |tag| %>
-                    <a href="<%= tag %>"><li class="category-btn"><%= tag %></li></a>
+                  <% mix.tags.each do |tag| %>
+                    <a href="<%= tag.tagname %>"><li class="category-btn"><%= tag.tagname %></li></a>
                   <% end %>
                 </ul>
               </div>
