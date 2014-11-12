@@ -1,23 +1,33 @@
+    <div class="content">
+      <div class="inner-content">
+        <div id="search-topintro">
+          <div class="search-topintro-comment">
+            <%= params[:q] %>
+            <h2><%= params[:tag] %></h2>
+            <%= search_form_for @search, url: search_index_path, :action => 'index'  do |f| %>
+            <%= text_field_tag("q", params[:q], :class => "span9") %>
+  　　　　　　　<%= link_to "remove", '#', class: "remove_fields" %>
+              <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
 
-<%= search_form_for @search, url: search_index_path, :action => 'index'  do |f| %>
-  <%= f.condition_fields do |c| %>
-    <%= render "condition_fields", f: c%>
-  <% end %>
-  <p><%= link_to_add_fields "Add Conditions", f, :condition %>
-  <div class="actions"><%= f.submit "Search" %></div>
-<% end %>
-  </div>
+            <div class="actions">
+              <%= f.submit "Search" %>
+            </div>
+            <% end %>
+  　　　　　</div>
 
+        </div>
+        <div class="search-main" role="main">
 
-<tr>
-  <th><%= sort_link(@search, :voice, "voice") %></th>
-  <th><%= sort_link(@search, :length, "length") %></th>
-</tr>
+        <div class="search-sidebar">
 
-<%= params[:q] %>
-<%= params[:tag] %>
+          <tr>
+            <th><%= sortable "Voice" %></th>
+            <th><%= sortable "Length" %></th>
+            <th><%= sortable "released_at", "Released" %></th>
+          </tr>
 
-<% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
+        </div>
+          <% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
               <p class="update-time"><%= mix.updated_at.strftime("%x") %></p>
@@ -42,4 +52,10 @@
           </article>
           <% end %>
 
+          <%= render partial: 'layouts/footer' %>
+
+        </div>
+
+      </div>
+    </div>
 

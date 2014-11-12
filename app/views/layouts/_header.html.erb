@@ -8,8 +8,20 @@
         </div>
         <nav id="main-menu" role="navigation">
           <ul id="main-header-menu" class="nav top-nav">
-            <li class="main-menu-item"><a href="">今の気分</a></li>
-            <li class="main-menu-item"><a href="">ジャンル</a></li>
+            <li class="main-menu-item"><a href="">今の気分</a>
+              <ul class="hidden_list">
+                <% @mood.each do |tags| %>
+                  <li><%= tags.tagname %></li>
+                <% end %>
+              </ul>
+            </li>
+            <li class="main-menu-item"><a href="">ジャンル</a>
+              <ul class="hidden_list">
+                <% @genre.each do |tags| %>
+                  <li><%= tags.tagname %></li>
+                <% end %>
+              </ul>
+            </li>
             <li class="main-menu-item"><a href="">アーティスト</a></li>
             <li class="main-menu-item"><a href="">イベント</a></li>
          </ul>

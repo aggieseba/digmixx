@@ -187,6 +187,15 @@ HEADER STYLES
   float: left;
 }
 
+#main-menu li ul.hidden_list {
+  color: #5FA9DD;
+  position: absolute;
+  visibility: hidden;
+}
+#main-menu li:hover ul {
+  visibility: visible;
+}
+
 /*********************
 top intro
 *********************/
@@ -336,4 +345,3 @@ footer
   margin-right: 20px;
   float: right;
 }
-
