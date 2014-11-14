@@ -202,6 +202,7 @@ HEADER STYLES
   background-color: rgba(250, 250, 250, 0.97);
   font-weight: 600;
   color: #202228;
+
 }
 
 #main-menu li ul.hidden_list {
@@ -212,6 +213,7 @@ HEADER STYLES
   color: #202228  ;
   position: absolute;
   visibility: hidden;
+
 }
 
 #main-menu li ul.hidden_list li {

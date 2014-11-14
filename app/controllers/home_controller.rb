@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @mixes = Mix.order(params[:direction] && params[:sort])
-    @mixes = @mixes.order(id: :desc)
+    @mixes = @mixes.order(id: :desc).limit(8)
     @mood = Tag.where(category: "mood")
     @genre = Tag.where(category: "genre")
   end
