@@ -25,12 +25,12 @@ body {
 }
 
 ::selection {
-  background-color: #202228;
+  background-color: #2F3444;
   color: #5FA9DD;
 }
 
 ::-moz-selection {
-  background-color: #202228;
+  background-color: #2F3444;
   color: #5FA9DD;
 }
 
@@ -154,7 +154,7 @@ HEADER STYLES
   width: 100%;
   top: 0;
   z-index: 9999;
-  background: #222532;
+  background: #2F3444;
   font-size: 14px;
   color: #fff;
   position: fixed;
