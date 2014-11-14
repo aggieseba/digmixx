@@ -5,6 +5,8 @@ class SearchController < ApplicationController
     @search.build_condition
     @mood = Tag.where(category: "mood")
     @genre = Tag.where(category: "genre")
+    @mix = Mix.where("mixname LIKE ?", "%#{params[:mixname]}")
+    @mix = @mix.where("content LIKE ?", "%#{params[:content]}")
   end
 
   def show

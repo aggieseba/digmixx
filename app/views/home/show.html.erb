@@ -1,2 +1,36 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<br><br><br><br><br><br>
+
+
+
+          <div class="search-topintro-comment">
+            <%= search_form_for @search, url: 'home_show_path', :action => 'show'  do |f| %>
+            <div class="field">
+              <p><%= f.label :mixname %></p>
+              <p><%= f.text_field :mixname %></p>
+            </div>
+            <div class="actions">
+              <%= f.submit "Search" %>
+            </div>
+            <% end %>
+  　　　　　</div>
+
+            <div class="search-topintro-comment">
+            <%= search_form_for @search, url: 'home_show_path', :action => 'show'  do |f| %>
+            <div class="field">
+              <p><%= f.label :content %></p>
+              <p><%= f.text_field :content %></p>
+            </div>
+            <div class="actions">
+              <%= f.submit "Search" %>
+            </div>
+            <% end %>
+  　　　　　</div>
+<% form_for @search, :url => 'home_show_path' do |f| %>
+<p><%= f.label :mixname %></p>
+<p><%= f.text_field :mixname %></p>
+<%= f.submit "submit" %>
+<% end %>
+
+<% @mixes.each do |mix| %>
+<%= raw mix.content %>
+<% end %>

@@ -21,6 +21,7 @@ html & body
 *********************/
 body {
   margin: 0;
+  background-color: #f9f9f9;
 }
 
 ::selection {
@@ -229,13 +230,31 @@ top intro
 main content
 *********************/
 .main {
-  top: 380px;
-  left: 50px;
+  background-color: #fff;
+  top: 420px;
   width: 1170px;
   margin: 0 auto;
   position: absolute;
   z-index: 1000;
+  border-radius: 1px;
+  box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.18);
 }
+
+.main .search-sidebar {
+  height: 300px;
+  width: 200px;
+  float: left;
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 10px 0 0 50px;
+}
+
+.main .hentry {
+  width: 860px;
+  margin-right: 20px;
+  float: right;
+}
+
 
 .hentry {
   background-color: #fff;
@@ -258,25 +277,25 @@ main content
 
 .category-btn {
   height: auto;
-  padding: 4px 12px;
+  padding: 4px 14px;
   margin-bottom: 4px;
-  background-color: #bababa;
+  background-color: #fff;
   font-size: 13px;
-  color: #fff;
-  font-weight: 600;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  border: solid 1px #bababa;
+  color: #515151;
+  border: solid 1px #d9d9d9;
   border-radius: 1px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0,0,0,.05);
   text-decoration: none;
-  box-shadow: none;
   display: inline-block;
 }
+
 .category-btn a {
-  color: #fff;
 }
 .category-btn a:visited {
-  color: #fff;
+}
+
+.category-btn a:hover li {
+  background-color: #5FA9DD;
 }
 
 /*********************
@@ -330,6 +349,8 @@ footer
   position: absolute;
   z-index: 1000;
 }
+
+
 
 .search-main .search-sidebar {
   height: 300px;
