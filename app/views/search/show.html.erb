@@ -18,7 +18,6 @@
           <% @tags.mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
-              <p class="update-time"><%= mix.updated_at.strftime("%x") %></p>
             </header>
             <div class="entry-content">
               <%= raw mix.content %>
