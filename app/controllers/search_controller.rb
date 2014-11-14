@@ -10,10 +10,8 @@ class SearchController < ApplicationController
   end
 
   def show
-    if params[:tag]
-      @mixes = Mix.tagged_with(params[:tag])
-    else
-      @mixes = Mix.all
-    end
+    @mood = Tag.where(category: "mood")
+    @genre = Tag.where(category: "genre")
+    @tags = Tag.find(params[:id])
   end
 end

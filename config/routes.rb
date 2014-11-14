@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   get 'search/show'
   resources :home
 
-  get 'search/:mixname', to: 'search#show'
-
-  get 'search/:tag', to: 'search#show', as: :tag
   resources :search
   resources :mixes
   root 'home#index'

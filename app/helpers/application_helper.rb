@@ -5,6 +5,8 @@ module ApplicationHelper
     link_to title, :sort => column, :direction => direction
   end
 
+
+
   def link_to_add_fields(name, f, type)
     new_object = f.object.send "build_#{type}"
     id = "new_#{type}"

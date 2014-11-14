@@ -11,14 +11,14 @@
             <li class="main-menu-item">今の気分
               <ul class="hidden_list">
                 <% @mood.each do |tags| %>
-                  <li><a href=""><%= tags.tagname %></a></li>
+                  <li><a href="<%= search_path(tags.id) %>"><%= tags.tagname %></a></li>
                 <% end %>
               </ul>
             </li>
             <li class="main-menu-item">ジャンル
               <ul class="hidden_list">
                 <% @genre.each do |tags| %>
-                  <li><a href=""><%= tags.tagname %></a></li>
+                  <li><a href="<%= search_path(tags.id) %>"><%= tags.tagname %></a></li>
                 <% end %>
               </ul>
             </li>

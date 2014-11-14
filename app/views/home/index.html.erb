@@ -3,8 +3,8 @@
         <div id="topintro">
           <img src="/assets/background.png">
           <div class="topintro-comment">
-            <h2>DIG MIXX</h2>
-            <h3>DISCOVER YOUR BGM</h3>
+            <h2>DISCOVER YOUR BGM</h2>
+            <h3>DIG MIXX</h3>
           </div>
         </div>
 
@@ -12,12 +12,15 @@
         <div class="main" role="main">
 
           <div class="search-sidebar">
-
+          <ul>
+            <li><%= sortable "voice", "声あり/なし" %></li>
+            <li><%= sortable "Length", "曲の長さ" %></li>
+            <li><%= sortable "Updated_at", "投稿順" %></li>
+          </ul>
           </div>
           <% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
-              <p class="update-time"><%= mix.updated_at.strftime("%x") %></p>
             </header>
             <div class="entry-content">
               <%= raw mix.content %>
@@ -26,7 +29,7 @@
               <div class="entry-category">
                 <ul>
                   <% mix.tags.each do |tag| %>
-                    <a href="search/<%= tag.tagname %>"><li class="category-btn"><%= tag.tagname %></li></a>
+                    <a href="<%= search_path(tag.id) %>"><li class="category-btn"><%= tag.tagname %></li></a>
                   <% end %>
                 </ul>
               </div>

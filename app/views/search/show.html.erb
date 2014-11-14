@@ -2,42 +2,20 @@
       <div class="inner-content">
         <div id="search-topintro">
           <div class="search-topintro-comment">
-            <h2><%= params[:tag] %></h2>
-            <%= search_form_for @search, url: search_index_path, :action => 'index'  do |f| %>
-  <%= f.condition_fields do |c| %>
-    <%= render "condition_fields", f: c%>
-  <% end %>
-  <p><%= link_to_add_fields "Add Conditions", f, :condition %>
-  <div class="actions"><%= f.submit "Search" %></div>
-<% end %>
-  </div>
-
-
-
-<tr>
-  <th><%= sort_link(@search, :voice, "voice") %></th>
-  <th><%= sort_link(@search, :length, "length") %></th>
-</tr>
-
-<%= params[:q] %>
-<%= params[:tag] %>
-
-<br>
+            <h2><%= @tags.tagname %></h2>
           </div>
 
         </div>
         <div class="search-main" role="main">
 
-        <div class="search-sidebar">
-
-          <tr>
-            <th><%= sortable "Voice" %></th>
-            <th><%= sortable "Length" %></th>
-            <th><%= sortable "released_at", "Released" %></th>
-          </tr>
-
-        </div>
-          <% @mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
+          <div class="search-sidebar">
+          <ul>
+            <li><%= sortable "voice", "声あり/なし" %></li>
+            <li><%= sortable "Length", "曲の長さ" %></li>
+            <li><%= sortable "Updated_at", "投稿順" %></li>
+          </ul>
+          </div>
+          <% @tags.mixes.each do |mix| %><%# もしカテゴリーがなかった時は無視する構文を書く %>
           <article class="hentry" role="article">
             <header class="article-header">
               <p class="update-time"><%= mix.updated_at.strftime("%x") %></p>
@@ -49,7 +27,7 @@
               <div class="entry-category">
                 <ul>
                   <% mix.tags.each do |tag| %>
-                    <a href="<%= tag.tagname %>"><li class="category-btn"><%= tag.tagname %></li></a>
+                    <a href="<%= search_path(tag.id) %>"><li class="category-btn"><%= tag.tagname %></li></a>
                   <% end %>
                 </ul>
               </div>
