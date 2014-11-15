@@ -154,7 +154,7 @@ HEADER STYLES
   width: 100%;
   top: 0;
   z-index: 9999;
-  background: #2F3444;
+  /* background: #2F3444; */
   font-size: 14px;
   color: #fff;
   position: fixed;
